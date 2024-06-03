@@ -6,19 +6,20 @@ export default function Home() {
     <main className="flex min-h-screen flex-row p-24 ">
 
       <a href="/Snake">
-        <div className="bg-yellow-500 w-20 h-20 mr-20 rounded-lg flex items-center justify-center">
-        Snake
-        </div>
+        <button className="h-20 mr-20 bg-gray-950 text-gray-400 border border-gray-400 border-b-4 font-medium overflow-hidden relative px-4 py-2 rounded-md hover:brightness-150 hover:border-t-4 hover:border-b active:opacity-75 outline-none duration-300 group">
+          <span className="bg-gray-400 shadow-gray-400 absolute -top-[150%] left-0 inline-flex w-80 h-[5px] rounded-md opacity-50 group-hover:top-[150%] duration-500 shadow-[0_0_10px_10px_rgba(0,0,0,0.3)]"></span>
+          Snake Game 🐍
+        </button>
       </a>
 
-      <a href="/Snake" className="">
+      <a href="#" className="">
         <div className="bg-yellow-500 w-20 h-20 mr-20 rounded-lg"></div>
       </a>
-      
-      <a href="/Snake" className="">
+
+      <a href="#" className="">
         <div className="bg-yellow-500 w-20 h-20 mr-20 rounded-lg"></div>
       </a>
-      
+
     </main>
   );
 }

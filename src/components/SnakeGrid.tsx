@@ -33,8 +33,8 @@ export default function SnakeGrid() {
     const moveSnake = () => {
         const newSnake = [...snake];
         const snakeHead = { ...newSnake[0] };
-        
-        
+
+
         if (direction === "UP") {
             snakeHead.y -= 1;
         }
@@ -47,7 +47,7 @@ export default function SnakeGrid() {
         if (direction === "RIGHT") {
             snakeHead.x += 1;
         }
-        
+
         if (snakeHead.x < 0 ||
             snakeHead.x >= Grid_Size ||
             snakeHead.y < 0 ||
@@ -78,42 +78,45 @@ export default function SnakeGrid() {
         generateFood();
     }, []);
 
-const handleKeyPress = (event: KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === "w" && direction !== "DOWN") {
-        setDirection("UP");
+    const handleKeyPress = (event: KeyboardEvent<HTMLDivElement>) => {
+        if (event.key === "w" && direction !== "DOWN") {
+            setDirection("UP");
+        }
+        if (event.key === "s" && direction !== "UP") {
+            setDirection("DOWN");
+        }
+        if (event.key === "a" && direction !== "RIGHT") {
+            setDirection("LEFT");
+        }
+        if (event.key === "d" && direction !== "LEFT") {
+            setDirection("RIGHT");
+        }
+        if (event.key === "ArrowUp" && direction !== "DOWN") {
+            setDirection("UP");
+        }
+        if (event.key === "ArrowDown" && direction !== "UP") {
+            setDirection("DOWN");
+        }
+        if (event.key === "ArrowLeft" && direction !== "RIGHT") {
+            setDirection("LEFT");
+        }
+        if (event.key === "ArrowRight" && direction !== "LEFT") {
+            setDirection("RIGHT");
+        }
     }
-    if (event.key === "s" && direction !== "UP") {
-        setDirection("DOWN");
-    }
-    if (event.key === "a" && direction !== "RIGHT") {
-        setDirection("LEFT");
-    }
-    if (event.key === "d" && direction !== "LEFT") {
-        setDirection("RIGHT");
-    }
-    if (event.key === "ArrowUp" && direction !== "DOWN") {
-        setDirection("UP");
-    }
-    if (event.key === "ArrowDown" && direction !== "UP") {
-        setDirection("DOWN");
-    }
-    if (event.key === "ArrowLeft" && direction !== "RIGHT") {
-        setDirection("LEFT");
-    }
-    if (event.key === "ArrowRight" && direction !== "LEFT") {
-        setDirection("RIGHT");
-    }
-}
     return (
-        <div 
-        onKeyDown={handleKeyPress}
-        tabIndex={0}
-        autoFocus
-        className="grid grid-cols-20 grid-rows-20 border border-black-500">
+        <div
+            onKeyDown={handleKeyPress}
+            tabIndex={0}
+            autoFocus
+            className="grid grid-cols-20 grid-rows-20 border border-black-500">
             {gameOver && (
-                <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-red-500 animate-pulse">
-                    Game Over
+                <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-red-500 animate-pulse bg-yellow-300">
+                    <a href="/Snake">
+                        Game Over
+                    </a>
                 </div>
+
             )}
             {Array.from({ length: Grid_Size }).map((_, y) => (
                 <div key={y} className="flex">
