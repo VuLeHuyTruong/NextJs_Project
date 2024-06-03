@@ -70,7 +70,7 @@ const config = {
 
         "snake": {
           '0% ': { scale: '1', opacity: '1' },
-          '100% ': { scale: '.6', opacity: '.5' },
+          '100% ': { scale: '.6', opacity: '.5',  transform: 'rotateY(150deg)'},
         }
       },
       animation: {

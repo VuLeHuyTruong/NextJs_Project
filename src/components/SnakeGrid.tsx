@@ -2,7 +2,7 @@
 
 import { KeyboardEvent, useEffect, useState } from "react";
 
-const Grid_Size = 20;
+const Grid_Size = 10;
 const Speed = 100;
 
 type Point = {
