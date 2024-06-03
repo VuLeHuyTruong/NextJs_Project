@@ -2,8 +2,8 @@
 
 import { KeyboardEvent, useEffect, useState } from "react";
 
-const Grid_Size = 10;
-const Speed = 100;
+const Grid_Size = 20;
+const Speed = 500;
 
 type Point = {
     x: number;
