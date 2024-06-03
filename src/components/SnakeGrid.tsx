@@ -61,6 +61,7 @@ export default function SnakeGrid() {
         newSnake.unshift(snakeHead);
 
         if (snakeHead.x === food.x && snakeHead.y === food.y) {
+
             generateFood();
         } else {
             newSnake.pop();
@@ -111,7 +112,7 @@ export default function SnakeGrid() {
             autoFocus
             className="grid grid-cols-20 grid-rows-20 border border-black-500">
             {gameOver && (
-                <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-red-500 animate-pulse bg-yellow-300">
+                <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-red-500 animate-pulse bg-yellow-300 z-20">
                     <a href="/Snake">
                         Game Over
                     </a>
@@ -123,11 +124,11 @@ export default function SnakeGrid() {
                     {Array.from({ length: Grid_Size }).map((_, x) => (
                         <div
                             key={x}
-                            className={`w-5 h-5 border border-yellow-100  
+                            className={`w-5 h-5 border border-gray-100  
 
-                        ${snake.some((snakePart) => snakePart.x === x && snakePart.y === y) && "bg-black animate-pulse"}
+                        ${snake.some((snakePart) => snakePart.x === x && snakePart.y === y) && "bg-black rounded-md animate-snake" }
 
-                        ${food.x === x && food.y === y && "bg-red-500 "}
+                        ${food.x === x && food.y === y && "bg-red-500 rounded-full"}
                         `}>
                         </div>
                     ))}
