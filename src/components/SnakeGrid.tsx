@@ -126,7 +126,7 @@ export default function SnakeGrid() {
                             key={x}
                             className={`w-5 h-5 border border-gray-100  
 
-                        ${snake.some((snakePart) => snakePart.x === x && snakePart.y === y) && "bg-black rounded-md animate-snake" }
+                        ${snake.some((snakePart) => snakePart.x === x && snakePart.y === y) && "bg-black rounded-md animate-snake"}
 
                         ${food.x === x && food.y === y && "bg-red-500 rounded-full"}
                         `}>
