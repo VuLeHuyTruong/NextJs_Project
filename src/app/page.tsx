@@ -14,14 +14,16 @@ export default function Home() {
       </a>
 
       <a href="/Pancakes" className="">
-      <button className="h-20 mr-20 bg-gray-700 text-gray-400 border rounded-full border-gray-400  border-b-4 px-4 py-2 hover:scale-110 hover:text-gray-100 hover:bg-red-500 transition duration-500 ">
+        <button className="h-20 mr-20 bg-gray-700 text-gray-400 border rounded-full border-gray-400  border-b-4 px-4 py-2 hover:scale-110 hover:text-gray-100 hover:bg-red-500 transition duration-500 ">
           Pancakes Game 🥞
         </button>
       </a>
-      
 
-      <a href="#" className="">
-        <div className="bg-yellow-500 w-20 h-20 mr-20 rounded-lg"></div>
+
+      <a href="/Memory_Game" className="">
+        <button className="h-20 mr-20 bg-gray-700 text-gray-400 border rounded-full border-gray-400  border-b-4 px-4 py-2 hover:scale-110 hover:text-gray-100 hover:bg-red-500 transition duration-500">
+          Memory Game 🧠
+        </button>
       </a>
 
     </main>
