@@ -3,7 +3,7 @@
 import { KeyboardEvent, useEffect, useState } from "react";
 
 const Grid_Size = 20;
-const Speed = 500;
+const Speed = 250;
 
 type Point = {
     x: number;
