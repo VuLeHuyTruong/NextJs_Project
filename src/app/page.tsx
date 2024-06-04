@@ -13,11 +13,46 @@ export default function Home() {
         </button>
       </a>
 
-      <a href="/Pancakes" className="">
+      {/* <a href="/Pancakes" className="">
         <button className="h-20 m-20 bg-gray-700 text-gray-400 border rounded-full border-gray-400  border-b-4 px-4 py-2 hover:scale-110 hover:text-gray-100 hover:bg-red-500 transition duration-500 ">
           Pancakes Game 🥞
         </button>
+      </a> */}
+      {/* <a href="/Snake" className="text-center m-20 h-20 hover:scale-110 transition duration-500 hover:brightness-150  hover:border-b active:opacity-75  duration-300 group">
+        <Image 
+          src='/images/snake.png'
+          alt="snake" 
+          width={70} height={70} quality={100}
+          className="object-cover border rounded-lg	 ms-7 "
+          />
+          <p>Snake Game 🐍 </p>
+      </a> */}
+
+<a href="/Pancakes" className="text-center m-20 h-20 hover:scale-110 transition duration-500 hover:brightness-150 ">
+        {/* <button className="h-20 mr-20 bg-gray-700 text-gray-400 border rounded-full border-gray-400  border-b-4 px-4 py-2 hover:scale-110 hover:text-gray-100 hover:bg-red-500 transition duration-500 ">
+          Pancakes Game 🥞
+        </button> */}
+        <Image 
+          src='/images/Pancakes.png'
+          alt="Pancakes" 
+          width={70} height={70} quality={100}
+          className="object-cover border rounded-lg ms-9 "
+          />
+          <p>Pancakes Game 🥞 </p>
       </a>
+
+
+        
+      {/* <a href="/Pancakes" className="text-center m-20 h-20 hover:scale-110 transition duration-500 hover:brightness-150">
+       
+        <Image 
+          src='/images/Memory.jpg'
+          alt="Memory" 
+          width={70} height={70} quality={100}
+          className="object-cover border rounded-lg ms-9 "
+          />
+          <p>Memory Game 🧠 </p>
+      </a> */}
 
       <a href="/Memory_Game" className="">
         <button className="h-20 m-20 bg-gray-700 text-gray-400 border rounded-full border-gray-400  border-b-4 px-4 py-2 hover:scale-110 hover:text-gray-100 hover:bg-red-500 transition duration-500">

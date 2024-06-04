@@ -30,10 +30,11 @@ export default function Pancakes() {
 
             )}
             <div className="text-red-500 ms-5">
-          <h2>rule: bạn ko thể để bánh bị cháy hơn quá 10 cái</h2>
+          <h2>rule: If you burn more than 10 cakes game is over</h2>
         </div>
     <a href="/" className="fixed m-5 z-30" >
-        <button className=" text-gray-400 bg-fuchsia-950 px-4 py-2 hover:scale-75 hover:bg-pink-500" >
+        <button className=" animate-[wiggle_1s_ease-in-out_infinite] text-gray-400 bg-purple-700 px-4 py-2 hover:scale-75 hover:bg-pink-500 duration-500 border rounded-lg hover:brightness-150">
+
         HOME
         </button>
       </a>
@@ -48,8 +49,8 @@ export default function Pancakes() {
       </div>
       
 
-      <div className="grid grid-cols-5 gap-4 mt-5">
-        {[...Array(10)].map((_, index) => (
+      <div className="grid grid-cols-4 gap-4 mt-5">
+        {[...Array(8)].map((_, index) => (
           <Pan
             key={index}
             onBakedPancake={handleBakedPancakes}
