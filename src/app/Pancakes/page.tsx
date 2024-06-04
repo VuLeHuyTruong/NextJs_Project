@@ -19,8 +19,6 @@ export default function Pancakes() {
   };
   
 
- 
-
   return (
     <>
     {gameOver && (
