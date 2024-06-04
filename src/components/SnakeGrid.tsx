@@ -2,7 +2,7 @@
 
 import { KeyboardEvent, useEffect, useState } from "react";
 
-const Grid_Size = 20;
+const Grid_Size = 15;
 const Speed = 250;
 
 type Point = {
@@ -20,7 +20,7 @@ export default function SnakeGrid() {
         { y: 0, x: 0 },
     ]);
 
-    const [food, setFood] = useState<Point>({ x: 0, y: 0 });
+    const [food, setFood] = useState<Point>({ x: 7, y: 7 });
     const [direction, setDirection] = useState<Direction>("DOWN");
     const [gameOver, setGameOver] = useState<boolean>(false);
 
