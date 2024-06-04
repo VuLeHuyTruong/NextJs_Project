@@ -71,12 +71,25 @@ const config = {
         "snake": {
           '0% ': { scale: '1', opacity: '1' },
           '100% ': { scale: '.6', opacity: '.5', transform: 'rotateY(45deg)' },
-        }
+        },
+        "food": {
+          '0% ': { scale: '1'},
+          '100% ': { scale: '.8'},
+        },
+
+    
+
+        "wiggle": {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "snake": "snake .7s linear infinite alternate",
+        "food": "food .7s linear infinite alternate",
+        "wiggle": "wiggle .8s linear infinite alternate",
       },
 
     },

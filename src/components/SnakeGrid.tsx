@@ -3,7 +3,7 @@
 import { KeyboardEvent, useEffect, useState } from "react";
 
 const Grid_Size = 15;
-const Speed = 250;
+const Speed = 200;
 
 type Point = {
     x: number;
@@ -23,6 +23,8 @@ export default function SnakeGrid() {
     const [food, setFood] = useState<Point>({ x: 7, y: 7 });
     const [direction, setDirection] = useState<Direction>("DOWN");
     const [gameOver, setGameOver] = useState<boolean>(false);
+
+    
 
     const generateFood = () => {
         const x = Math.floor(Math.random() * Grid_Size);
@@ -110,15 +112,16 @@ export default function SnakeGrid() {
             onKeyDown={handleKeyPress}
             tabIndex={0}
             autoFocus
-            className="grid grid-cols-20 grid-rows-20 border border-black-500">
+            className="grid grid-cols-20 grid-rows-20 border border-black-500 bg-white">
+
             {gameOver && (
-                <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-red-500 animate-pulse bg-yellow-300 z-20">
-                    <a href="/Snake">
+                <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-red-800 bg-gradient-to-b from-black z-20 brightness-200 ">
+                    <a href="/Snake" className="animate-wiggle [text-shadow:2px_2px_red]">
                         Game Over
                     </a>
                 </div>
-
             )}
+
             {Array.from({ length: Grid_Size }).map((_, y) => (
                 <div key={y} className="flex">
                     {Array.from({ length: Grid_Size }).map((_, x) => (
@@ -128,7 +131,7 @@ export default function SnakeGrid() {
 
                         ${snake.some((snakePart) => snakePart.x === x && snakePart.y === y) && "bg-black rounded-md animate-snake"}
 
-                        ${food.x === x && food.y === y && "bg-red-500 rounded-full"}
+                        ${food.x === x && food.y === y && "bg-red-500 rounded-full animate-food"}
                         `}>
                         </div>
                     ))}
