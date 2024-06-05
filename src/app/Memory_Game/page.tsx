@@ -65,7 +65,7 @@ export default function MemoryGame() {
         </button>
         
       </a>
-        <h1>MEMORY GAME</h1><br /><br />
+        <h1>MEMORY GAME</h1>
         {gameOver && (<h2 className="p-5">🎉🎉🎉 YOU WON! 🎉🎉🎉</h2>)}
         <div className="grid grid-cols-4 gap-5 mt-5">
             {cards.map((card, index) => (
