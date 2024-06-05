@@ -24,7 +24,7 @@ export default function SnakeGrid() {
     const [direction, setDirection] = useState<Direction>("DOWN");
     const [gameOver, setGameOver] = useState<boolean>(false);
 
-    
+
 
     const generateFood = () => {
         const x = Math.floor(Math.random() * Grid_Size);
@@ -50,14 +50,42 @@ export default function SnakeGrid() {
             snakeHead.x += 1;
         }
 
-        if (snakeHead.x < 0 ||
-            snakeHead.x >= Grid_Size ||
-            snakeHead.y < 0 ||
-            snakeHead.y >= Grid_Size ||
+        // Trường hợp có tường
+
+        // if (snakeHead.x < 0 ||
+        //     snakeHead.x >= Grid_Size ||
+        //     snakeHead.y < 0 ||
+        //     snakeHead.y >= Grid_Size ||
+        //     newSnake.some((snakePart) => snakePart.x === snakeHead.x && snakePart.y === snakeHead.y)
+        // ) {
+        //     setGameOver(true);
+        //     return;
+        // }
+
+
+        // Trường hợp không có tường
+
+        if (
             newSnake.some((snakePart) => snakePart.x === snakeHead.x && snakePart.y === snakeHead.y)
         ) {
             setGameOver(true);
             return;
+        }
+        if (snakeHead.x < 0
+        ) {
+            snakeHead.x = Grid_Size - 1;
+        }
+        if (snakeHead.x > Grid_Size - 1
+        ) {
+            snakeHead.x = 0;
+        }
+        if (snakeHead.y < 0
+        ) {
+            snakeHead.y = Grid_Size - 1;
+        }
+        if (snakeHead.y > Grid_Size - 1
+        ) {
+            snakeHead.y = 0;
         }
 
         newSnake.unshift(snakeHead);
@@ -116,7 +144,7 @@ export default function SnakeGrid() {
 
             {gameOver && (
                 <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-red-800 bg-gradient-to-b from-black z-20 brightness-200 ">
-                    <a href="/Snake" className="animate-wiggle [text-shadow:2px_2px_red]">
+                    <a href="/Snake" className="animate-wiggle [text-shadow:3px_3px_red]">
                         Game Over
                     </a>
                 </div>

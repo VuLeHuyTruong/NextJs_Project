@@ -28,6 +28,7 @@ export default function Pancakes() {
   return (
 
     <>
+    <main className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
       {gameOver && (
         <div className="absolute inset-0 flex justify-center items-center text-4xl font-bold text-red-500 animate-pulse bg-yellow-300 z-20">
           <a href="/Pancakes">
@@ -36,9 +37,9 @@ export default function Pancakes() {
         </div>
 
       )}
-      <h2 className="flex flex-col items-center">🥞Pancakes Game🥞</h2>
-      <div className="text-red-500 ms-5">
-        <h2>rule: If you burn more than 10 cakes game is over</h2>
+      <h2 className="flex flex-col items-center font-bold">🥞Pancakes Game🥞</h2>
+      <div className="ms-2 font-bold text-red-600">
+        <h2>rule: If you burn more than 10 cakes game is over !!!</h2>
       </div>
       <a href="/" className="fixed m-5 z-30" >
         <button className=" animate-[wiggle_1s_ease-in-out_infinite] text-gray-400 bg-purple-700 px-4 py-2 hover:scale-75 hover:bg-pink-500 duration-500 border rounded-lg hover:brightness-150">
@@ -47,10 +48,10 @@ export default function Pancakes() {
         </button>
       </a>
       <div className="flex gap-5 justify-center">
-        <div className="text-green-500">
+        <div className="text-green-700 font-bold">
           <h2>Baked cake: {totalBakedPancakes}</h2>
         </div>
-        <div className="text-red-500">
+        <div className="text-red-800 font-bold">
           <h2>Burned cake: {totalBurnedPancakes}</h2>
         </div>
 
@@ -66,6 +67,7 @@ export default function Pancakes() {
           />
         ))}
       </div>
+      </main>
     </>
   );
 }

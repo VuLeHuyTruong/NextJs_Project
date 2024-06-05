@@ -78,11 +78,26 @@ const config = {
         },
 
     
-
         "wiggle": {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         },
+        "wiggleSnake": {
+          '0%, 100%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
+        },
+        "colors": {
+          '0%': { color: 'red' },
+          '25%': { color: 'purple' },
+          '50%': { color: 'blue' },
+          '100%': { color: 'black' },
+        },
+        "flip": {
+          '0%': { },
+          '100%': { transform: 'rotateY(360deg)' },
+        },
+
+
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -90,7 +105,11 @@ const config = {
         "snake": "snake .7s linear infinite alternate",
         "food": "food .7s linear infinite alternate",
         "wiggle": "wiggle .8s linear infinite alternate",
+        "wiggleSnake": "wiggleSnake .8s linear infinite alternate",
+        "flip": "flip .8s linear infinite alternate",
+        "colors": "wiggle 2s linear infinite alternate, food 1s linear infinite alternate, colors 1s linear infinite alternate",
       },
+
 
     },
   },
